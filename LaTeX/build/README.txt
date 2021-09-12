@@ -14,8 +14,7 @@
 % This work has the LPPL maintenance status "author-maintained"                                    %
 %                                                                                                  %
 % This work consists of the files:                                                                 %
-% - szablonPG.cls                   - class file                                                   %
-% - CZYTAJTO.txt                    - this file                                                    %
+% - szablonPG.cls                   - class file                                                   %                                              %
 % - szablonPracyPG_demo.tex         - demo source                                                  %
 % - szablonPracyPG_demo.pdf         - demu output                                                  %
 % - szablonPracyPG_doc.pdf          - documentation                                                %
@@ -27,9 +26,9 @@
 % Jakub Maksymiuk                                                                                  %
 % Faculty of Technical Phisics and Applied Mathematics                                             %
 % Department of Nonlinear Analysis and Statistic                                                   %
-% Gdañsk Univeristy of Technology                                                                  %
+% Gdaï¿½sk Univeristy of Technology                                                                  %
 % Gabriela Narutowicza 11/12                                                                       %
-% 80-233 Gdañsk                                                                                    %
+% 80-233 Gdaï¿½sk                                                                                    %
 %                                                                                                  %
 % jmaksymiuk@mif.pg.gda.pl                                                                         %
 %                                                                                                  %
@@ -46,8 +45,8 @@
 %                                                                                                  %
 %--------------------------------------------------------------------------------------------------%
 
-Ten plik zawiera opis klasy SzablonPracyPG od strony zgodnoœci z wymaganiami edycyjnymi. Instrukcja
-obs³ugi pakietu i przyk³ad u¿ycia znajduj¹ siê w plikach:
+Ten plik zawiera opis klasy SzablonPracyPG od strony zgodnoï¿½ci z wymaganiami edycyjnymi. Instrukcja
+obsï¿½ugi pakietu i przykï¿½ad uï¿½ycia znajdujï¿½ siï¿½ w plikach:
 
  - szablonPracyPG_demo.tex
  - szablonPracyPG_demo.pdf
@@ -98,11 +97,11 @@ obs³ugi pakietu i przyk³ad u¿ycia znajduj¹ siê w plikach:
 %--------------------------------------------------------------------------------------------------%
 % 5. titlepage
 %       (TP) template of titlepage is specified in
-%,,Zarz¹dzenie Rektora Politechniki Gdañskiej nr 15/2014 z dnia 24 marca 2014 r.''
+%,,Zarzï¿½dzenie Rektora Politechniki Gdaï¿½skiej nr 15/2014 z dnia 24 marca 2014 r.''
 %
 % 6. statement
 %       (ST) template of copyright statement is specified in
-%,,Zarz¹dzenie Rektora Politechniki Gdañskiej nr 15/2014 z dnia 24 marca 2014 r.''
+%,,Zarzï¿½dzenie Rektora Politechniki Gdaï¿½skiej nr 15/2014 z dnia 24 marca 2014 r.''
 %
 %       for both titlepage and statement we use pdfpages package,
 %       student gets pdf files from MojaPG and prepend them to main file using \incudepdf command
@@ -114,7 +113,7 @@ obs³ugi pakietu i przyk³ad u¿ycia znajduj¹ siê w plikach:
 %--------------------------------------------------------------------------------------------------%
 
 % Project starting, providing basic compatibility with
-% ,,Zarz¹dzenie Rektora Politechniki Gdañskiej nr 17/2014 z 1 kwietnia 2014 r.''
+% ,,Zarzï¿½dzenie Rektora Politechniki Gdaï¿½skiej nr 17/2014 z 1 kwietnia 2014 r.''
 % in what follows we call it ZR for short,
 %
 % List of requirments according to ZR:

@@ -3,7 +3,7 @@
 %                              szablonPG.cls                                     %
 %                                                                                %
 % A LaTeX2e document class for Eng/BSc/MSc thesis template                       %
-%                                             Gda�sk University of Technology    %
+%                                             Gdansk University of Technology    %
 %                                                                                %
 %  (c) 2016, by Jakub Maksymiuk                                                  %
 %                                                                                %

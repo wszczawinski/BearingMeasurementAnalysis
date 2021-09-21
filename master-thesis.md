@@ -19,8 +19,6 @@ To begin with, it seems appropriate to give an overview of what Data Science is,
   </figcaption>
 </figure>
 
-
-
 One can then recall a short definition, the unfolding of which, combined with the diagram above, should give a fairly good intuition about the complexity of this domain.
 
 > "Data science combines the scientific method, math and statistics, specialized programming, advanced analytics, AI, and even storytelling to uncover and explain the business insights buried in data." [2]
@@ -57,7 +55,16 @@ When looking for a reference point, it is necessary to trace the software used s
 
 ### 3.1 Excel (Microsoft)
 
+Some initial text.
 
+<figure align="center">
+  <img align="center" src="./images/excel.png" alt="Excel GUI" style="width: 50%;" />
+  <figcaption align = "center">
+    <i>Fig.2 GUI of Excel software. [7]</i>
+  </figcaption>
+</figure>
+
+> "Microsoft Excel provides a grid interface to organize nearly any type of information.  The power of Excel lies in it's flexibility to define the layout and structure of the information you want to manage.  Basic tasks require no special training, and Excel allows you to work with text, numbers, and date information in a relatively open and unstructured way.  Nearly 30 years after it's initial introduction, Excel remains the worlds leading spreadsheet software." [6]
 
 ### 3.2 Origin (OriginLab)
 
@@ -72,13 +79,50 @@ Origin is GUI based software aimed at scientists and therefore has a lot of capa
 
 > "**Origin** is the data analysis and graphing software of choice for over half a million scientists and engineers in commercial industries, academia, and government laboratories worldwide. Origin offers an easy-to-use interface for beginners, combined with the ability to perform advanced customization as you become more familiar with the application. **Origin** graphs and analysis results can automatically update on data or parameter change, allowing you to create templates for repetitive tasks or to perform batch operations from the user interface, without the need for programming. Extend the capabilities in Origin by installing free Apps available from our website." [4]
 
-### 3.3 Lab View 
+### 3.3 LabVIEW (NI)
 
-### 3.4 Solartron - metrology
+LabVIEW is used to create a measurement strategy, build a test bench, and quickly view real-time data. Its capabilities are quite broad and it is a good test environment because of the ease of making changes and access to simple visualization methods immediately after measurements.
 
+<figure align="center">
+  <img align="center" src="./images/labview.png" alt="LabVIEW GUI" style="width: 50%;" />
+  <figcaption align = "center">
+    <i>Fig.2 GUI of LabVIEW software. [5]</i>
+  </figcaption>
+</figure>
 
+> "LabVIEW is systems engineering software for applications that require test, measurement, and control with rapid access to hardware and data insights. LabVIEW offers a graphical programming approach that helps you visualize every aspect of your application, including hardware configuration, measurement data, and debugging. This visualization makes it simple to integrate measurement hardware from any vendor, represent complex logic on the diagram, develop data analysis algorithms, and design custom engineering user interfaces." [5]
+
+### 3.4 Solartron Metrology
+
+In this particular case, one of the software that will be used in this research work will be a detector program from Solartron Metrology. Due to the measuring devices used, the program is needed to process the output signals from the measuring devices. The signal that arrives at the computer is then processed by the software and prepared for further analysis in the form of files such as .cvs. There is a simple interface here both to control the sampling method and to adjust the format of the output data. In the following discussion the role of the software from Solartron will be omitted because the focus is on the analysis of the data itself and not on the way of conducting the measurements.
 
 ## 4. Presentation of the general outline of data science methods and the possibility of using them to analyze measurements.
+
+
+
+### 4.1 Data science
+
+
+
+### 4.2 Lifecycle of data science project
+
+When it comes to how a project is run in data science, there is a term called project lifecycle. This may differ in the way it is described as well as in the specific points depending on the source where you look for information about the project lifecycle, but in principle the main steps will be similar:
+
+1. Understanding problem
+2. Data collection
+3. Data cleaning and processing
+4. Exploratory data analysis
+5. Model building and evaluation
+6. Comunicating model results
+7. Model deployment and maintenance
+
+### 4.3 Tools
+
+
+
+### 4.4 Use cases
+
+
 
 ## 5. Measurements of plain bearings at available test stands.
 
@@ -90,11 +134,21 @@ Origin is GUI based software aimed at scientists and therefore has a lot of capa
 
 [1] https://thedatascientist.com/data-science-without-programming/
 
+[1] https://towardsdatascience.com/data-science-101-life-cycle-of-a-data-science-project-86cbc4a2f7f0
+
 [2] https://www.ibm.com/cloud/learn/data-science-introduction
 
 [3] https://www.simplilearn.com/tutorials/data-science-tutorial/what-is-data-science
 
 [4] https://www.originlab.com/index.aspx?go=PRODUCTS/Origin
+
+[5] https://www.ni.com/pl-pl/shop/labview.html
+
+[6] https://www.opengatesw.net/ms-excel-tutorials/
+
+[7] https://www.microsoft.com/en-us/microsoft-365/blog/2019/02/06/excel-with-microsoft-excel-in-office-365/
+
+[8]
 
 [10] A. Geron, _Hands-On Machine Learning with Scikit-Learn and TensorFlow_, O'Reilly Media, Inc., 2017
 

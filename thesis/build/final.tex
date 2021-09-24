@@ -1,0 +1,27 @@
+\documentclass[a4paper]{book}
+
+\usepackage{pdfpages}
+
+\begin{document}
+
+\includepdf[
+    pages={ -,          % all pages
+            {}          % empty back page
+        }
+    ]
+    {titlepage.pdf}     
+\includepdf[
+    pages={ -,          % all pages
+            {}          % empty back page
+        }
+    ]
+    {statement.pdf}     
+    
+\includepdf[
+    pages={-}           % all pages
+    ]
+    {master-thesis.pdf} 
+
+\end{document}
+
+% EOF

@@ -73,9 +73,10 @@ Origin is GUI based software aimed at scientists and therefore has a lot of capa
 <figure align="center">
   <img align="center" src="./images/origin.png" alt="Origin GUI" style="width: 50%;" />
   <figcaption align = "center">
-    <i>Fig.2 GUI of Origin software. [4]</i>
+    <i>Fig.3 GUI of Origin software. [4]</i>
   </figcaption>
 </figure>
+
 
 > "**Origin** is the data analysis and graphing software of choice for over half a million scientists and engineers in commercial industries, academia, and government laboratories worldwide. Origin offers an easy-to-use interface for beginners, combined with the ability to perform advanced customization as you become more familiar with the application. **Origin** graphs and analysis results can automatically update on data or parameter change, allowing you to create templates for repetitive tasks or to perform batch operations from the user interface, without the need for programming. Extend the capabilities in Origin by installing free Apps available from our website." [4]
 
@@ -86,9 +87,10 @@ LabVIEW is used to create a measurement strategy, build a test bench, and quickl
 <figure align="center">
   <img align="center" src="./images/labview.png" alt="LabVIEW GUI" style="width: 50%;" />
   <figcaption align = "center">
-    <i>Fig.2 GUI of LabVIEW software. [5]</i>
+    <i>Fig.4 GUI of LabVIEW software. [5]</i>
   </figcaption>
 </figure>
+
 
 > "LabVIEW is systems engineering software for applications that require test, measurement, and control with rapid access to hardware and data insights. LabVIEW offers a graphical programming approach that helps you visualize every aspect of your application, including hardware configuration, measurement data, and debugging. This visualization makes it simple to integrate measurement hardware from any vendor, represent complex logic on the diagram, develop data analysis algorithms, and design custom engineering user interfaces." [5]
 
@@ -108,25 +110,71 @@ In this particular case, one of the software that will be used in this research 
 
 When it comes to how a project is run in data science, there is a term called project lifecycle. This may differ in the way it is described as well as in the specific points depending on the source where you look for information about the project lifecycle, but in principle the main steps will be similar:
 
-1. Understanding problem
-2. Data collection
-3. Data cleaning and processing
-4. Exploratory data analysis
-5. Model building and evaluation
-6. Comunicating model results
-7. Model deployment and maintenance
+#### 4.2.1 Understanding problem
 
-### 4.3 Tools
+Even before first insight into the data it is nessesary to define and understand the problem which is a subject of analysis. Deep understanding of the problem principles is the most inportant in early stage because it can protect from loosing time for development of model which won't meet assumptions. In data science most of the projects is based on problems brought in from bussines or scientific demand and hance it is very important that the cominication between those aggregating data and those doing strictly data science analysis is clear. Data analysis itself should not be in isolation from those doing the measuring, and there needs to be a constant exchange of insights and guidance on the desired output. 
+
+#### 4.2.2 Data collection
+
+ Once you understand the problem, it is important to collect the right data sets. Data is the core of the whole problem and it is necessary to collect it in an appropriate way to be able to create a project based on it. In the case of this particular paper, the data is collected by researchers working in the field of plain bearings on a daily basis and on specially designed for these purposes test stands.
+
+#### 4.2.3 Data cleaning and processing
+
+It is not enough to just collect data, because most of the time such raw data will not be suitable to create a model. Once collected, the data needs to be properly processed and cleaned before it can be used for the rest of the work. It is necessary to solve flaws and inconsistencies as well as deal with null values and outliers. 
+
+#### 4.2.4 Exploratory data analysis
+
+#### 4.2.5 Model building and evaluation
+
+#### 4.2.6 Comunicating model results
+
+#### 4.2.7 Model deployment and maintenance
 
 
 
-### 4.4 Use cases
+
+
+### 4.3 Programming language - Python
+
+
+
+### 4.4 Tools
+
+
+
+### 4.5 Use cases
 
 
 
 ## 5. Measurements of plain bearings at available test stands.
 
+The main measurement will focus on trying to analyze the wear of the sliding sleeve. The surface of the bushing has been asymmetrically worn down and the task of analyzing the measurement data will be to determine the volume of loss in the inner wall of the bushing.
+
+<figure align="center">
+  <img align="center" src="./images/sleeve.png" alt="Measurement sleeve" style="width: 50%;" />
+  <figcaption align = "center">
+    <i>Fig.5 Example of measurement sleeve.</i>
+  </figcaption>
+</figure>
+
+
+
+
+
+<figure align="center">
+  <img align="center" src="./images/test-stand.png" alt="Measurement stand" style="width: 50%;" />
+  <figcaption align = "center">
+    <i>Fig.6 Measurement stand.</i>
+  </figcaption>
+</figure>
+
+
+
+
+
 ## 6. Use of data science methods to analyze obtained data from plain bearing measurements.
+
+
 
 ## 7. Development of the analysis results and conclusions.
 

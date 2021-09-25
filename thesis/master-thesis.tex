@@ -1,13 +1,13 @@
 \documentclass[nostrict]{PG-schema}
 
 \usepackage[unicode=true]{hyperref}
-\newcommand\PDFtitle{Analysis of the plain bearings measurements results using data science methods}
+\newcommand\PDFtitle{Analysis of the plain bearings measurements results using data science methods.}
 \newcommand\PDFauthors{Wojciech Szczawiñski}
 \hypersetup{
   pdftitle={\PDFtitle},
   pdfauthor={\PDFauthors},
   pdfsubject={Master Thesis},
-  pdfkeywords={}
+  pdfkeywords={master thesis, mechanical engineering, data science, plain bearings, analyzes}
  }
 
 \usepackage{multicol} % for two columns set
@@ -23,13 +23,16 @@
 \tableofcontents    % table of content
 \listoffigures      % list of figures
 
+
 \chapter{Defining the purpose of the thesis}
 
 The main objective of this paper is an attempt to use the tools provided by Data Science to analyze data from measurements made for research work in mechanical engineering.
 
 In some applications, a conventional data analysis methods for mechanical engineering are beginning to be insufficient and a limitation to obtaining the best possible conclusions from measurements. Here it would be useful to look around at what data analysis capabilities have been developed in recent years and try to implement them for mechanical engineering. The leading branch of science focusing on data analysis in recent years is actually Data Science and it seems that using the tools that have been developed there can bring a lot of benefits to processing measurements data. 
 
-Data science methods are not limited by the existing software - one can freely shape the interface and use any statistical tools, data science tools based on python and R libraries are optimized for processing large databases, use of machine learning methods is increasingly used to make predictions based on previous experiences.
+Data science methods are not limited by the existing software - one can freely shape the interface and use any statistical tools. Data science tools based on python and R libraries are optimized for processing large databases, use of machine learning methods is increasingly used to make predictions based on previous experiences.
+
+Thanks to the fact that most of the libraries around Python and R are open source and built by the community, they very often respond directly to the needs of users and are constantly extended and new ones appear. More information about programming languages and available tools will be presented in Chapter 4.
 
 \section{Preliminary definition of Data Science}
 
@@ -37,7 +40,7 @@ To begin with, it seems appropriate to give an overview of what Data Science is,
 
 \begin{figure}[htbp]
   \begin{center}
-    \resizebox{0.5\textwidth}{!}{
+    \resizebox{0.7\textwidth}{!}{
       \includegraphics{images/data-science-graph.png}
     }
     \caption[Data Science graph.]{Data Science graph. \cite{dsgraph} }
@@ -47,11 +50,13 @@ To begin with, it seems appropriate to give an overview of what Data Science is,
 
 One can then recall a short definition, the unfolding of which, combined with the diagram above, should give a fairly good intuition about the complexity of this domain.
 
-\emph{"Data science combines the scientific method, math and statistics, specialized programming, advanced analytics, AI, and even storytelling to uncover and explain the business insights buried in data." \cite{dsdefinition} }
+\begin{quote}
+\emph{"Data science combines the scientific method, math and statistics, specialized programming, advanced analytics, AI, and even storytelling to uncover and explain the business insights buried in data."} \cite{dsdefinition} 
+\end{quote}
 
 First of all Data Science is the domain of study that deals with vast volumes of data which are collected from different sources. Here we are dealing with the lowest circle in the diagram \ref{data-science-graph}, the data can come from a business that wants to analyze its actions (for example, it can be traffic data from a store's website, or GPS data from trucks of a transport company) or from specialized research from which we want to draw the greatest insight. The data used for analysis can be from multiple sources and present in various formats.
 
-Data Science uses modern tools and techniques that come from both circles of the top graph \ref{data-science-graph}. Techniques derived from mathematics and statistics provide long-established capabilities for computing, analyzing, and processing data. Computer science, on the other hand, provides the ability to perform these calculations on large data sets and curate machine learning algorithms to build predictive models. 
+Data Science uses modern tools and techniques that come from both circles on the top of graph \ref{data-science-graph}. Techniques derived from mathematics and statistics provide long-established capabilities for computing, analyzing, and processing data. Computer science, on the other hand, provides the ability to perform these calculations on large data sets and curate machine learning algorithms to build predictive models. 
 
 The combination of all this gives  the ability to find unseen patterns, extract meaningful information and make business decisions that would not be possible with conventional solutions.
 
@@ -69,11 +74,23 @@ Another advantage will be the possibility of comparing the results of analyses b
 
 The preliminary idea of the work presented in this paper is to analyze the results of measurements using selected data science methods and to compare these results with the results of analysis performed using conventional methods of mechanical measurement analysis that have been used so far by the team who perform the measurements.
 
-\chapter{Identifying problems that arise with the collection of an increasing amount of measurement data.}
+\chapter{Identifying problems that arise with the collection of an increasing amount of measurement data}
 
 Improvements in the quality of measuring instruments and increase in their precision allow us to perform measurements with increasing accuracy and resolution. Thus, the amount of data that we obtain from measurements is also growing and it seems that this trend will continue in the coming years. Hence, there is a need to increase the possibility of processing these data, preferably in a complete free way and giving the flexibility to choose tools for their analysis from the wildest possible spectrum. In such a way as to be able to adopt to the incoming new data in case of a desire to extend measurements or change the measuring equipment and thus add new output results or possibility of adopting a different data structure.
 
 Data processing methods, which have been used so far in the process of measurement in mechanical engineering starts to limit possibilities of extracting the greatest possible amount of informations from the measurements.
+
+\section{Performance problems that arise with large data sets}
+
+For measurements with the latest high-resolution sensors, a single measurement can consist of several thousand measurement points or more. Spreadsheet-type graphical programs start to be difficult to use in such cases, and problems may occur from the very moment of viewing the data. Further, there are limited possibilities of data cleaning as well as limitations with presenting data in the form of graphs, especially when it comes to graphs presenting three-dimensional measurements.
+
+\section{Automatic analyzes of similar datasets}
+
+If we consider the case in which we want to measure a large number of similar elements - in this case sleeves that are sliding bearings, there arises a desire to have a tool that will enable automatic start of analysis on successive sets of data from measurements. 
+
+With conventional programs, this requires duplicating a spreadsheet and pasting more data there. In case of a script written for a given type of measurement it is enough to run it on another file and almost immediately we get desired graphs or any other form of results.
+
+
 
 \chapter{Searching for available methods of data analysis already used in mechanical engineering.}
 
@@ -85,7 +102,7 @@ The first thing that comes to mind when analyzing data is, of course, Excel. The
 
 \begin{figure}[htbp]
   \begin{center}
-    \resizebox{0.5\textwidth}{!}{
+    \resizebox{0.7\textwidth}{!}{
       \includegraphics{images/excel.png}
     }
     \caption[Excel GUI]{GUI of Excel software. \cite{linkexcel} }
@@ -93,7 +110,9 @@ The first thing that comes to mind when analyzing data is, of course, Excel. The
   \end{center}
 \end{figure}
 
-\emph{"Microsoft Excel provides a grid interface to organize nearly any type of information.  The power of Excel lies in it is flexibility to define the layout and structure of the information you want to manage.  Basic tasks require no special training, and Excel allows you to work with text, numbers, and date information in a relatively open and unstructured way.  Nearly 30 years after it is initial introduction, Excel remains the worlds leading spreadsheet software."  \ref{linkexceldefinition} }
+\begin{quote}
+\emph{"Microsoft Excel provides a grid interface to organize nearly any type of information.  The power of Excel lies in it is flexibility to define the layout and structure of the information you want to manage.  Basic tasks require no special training, and Excel allows you to work with text, numbers, and date information in a relatively open and unstructured way.  Nearly 30 years after it is initial introduction, Excel remains the worlds leading spreadsheet software." } \cite{linkexceldefinition}
+\end{quote}
 
 \section{Origin (OriginLab)}
 
@@ -101,7 +120,7 @@ Origin is GUI based software aimed at scientists and therefore has a lot of capa
 
 \begin{figure}[htbp]
   \begin{center}
-    \resizebox{0.5\textwidth}{!}{
+    \resizebox{0.7\textwidth}{!}{
       \includegraphics{images/origin.png}
     }
     \caption[Origin GUI]{Origin GUI. \cite{linkorigin} }
@@ -109,7 +128,9 @@ Origin is GUI based software aimed at scientists and therefore has a lot of capa
   \end{center}
 \end{figure}
 
-\emph{" Origin is the data analysis and graphing software of choice for over half a million scientists and engineers in commercial industries, academia, and government laboratories worldwide. Origin offers an easy-to-use interface for beginners, combined with the ability to perform advanced customization as you become more familiar with the application. Origin graphs and analysis results can automatically update on data or parameter change, allowing you to create templates for repetitive tasks or to perform batch operations from the user interface, without the need for programming. Extend the capabilities in Origin by installing free Apps available from our website." \cite{linkorigin} }
+\begin{quote}
+\emph{" Origin is the data analysis and graphing software of choice for over half a million scientists and engineers in commercial industries, academia, and government laboratories worldwide. Origin offers an easy-to-use interface for beginners, combined with the ability to perform advanced customization as you become more familiar with the application. Origin graphs and analysis results can automatically update on data or parameter change, allowing you to create templates for repetitive tasks or to perform batch operations from the user interface, without the need for programming. Extend the capabilities in Origin by installing free Apps available from our website."} \cite{linkorigin} 
+\end{quote}
 
 \section{LabVIEW (NI)}
 
@@ -117,7 +138,7 @@ LabVIEW is used to create a measurement strategy, build a test bench, and quickl
 
 \begin{figure}[htbp]
   \begin{center}
-    \resizebox{0.5\textwidth}{!}{
+    \resizebox{0.7\textwidth}{!}{
       \includegraphics{images/labview.png}
     }
     \caption[LabVIEW GUI]{LabVIEW GUI. \cite{linklabview} }
@@ -125,7 +146,9 @@ LabVIEW is used to create a measurement strategy, build a test bench, and quickl
   \end{center}
 \end{figure}
 
-\emph{"LabVIEW is systems engineering software for applications that require test, measurement, and control with rapid access to hardware and data insights. LabVIEW offers a graphical programming approach that helps you visualize every aspect of your application, including hardware configuration, measurement data, and debugging. This visualization makes it simple to integrate measurement hardware from any vendor, represent complex logic on the diagram, develop data analysis algorithms, and design custom engineering user interfaces." \cite{linklabview}  }
+\begin{quote}
+\emph{"LabVIEW is systems engineering software for applications that require test, measurement, and control with rapid access to hardware and data insights. LabVIEW offers a graphical programming approach that helps you visualize every aspect of your application, including hardware configuration, measurement data, and debugging. This visualization makes it simple to integrate measurement hardware from any vendor, represent complex logic on the diagram, develop data analysis algorithms, and design custom engineering user interfaces."} \cite{linklabview}  
+\end{quote}
 
 \section{Solartron Metrology}
 
@@ -157,18 +180,29 @@ It is not enough to just collect data, because most of the time such raw data wi
 
 \subsection{Exploratory data analysis}
 
+At this stage of the project there is already data as well as it has been cleaned and pre-processed and organized. One can take a deeper look at this data to get familiar with the properties and features. There is also an occasion to build a so-called intuition about the data set and begin to think about a strategy for creating the model. After a closer look at the data, there is an opportunity to raise a deeper discussion with experts in the field, try to find the first patterns and visualizations.
+
 \subsection{Model building and evaluation}
 
-\subsection{Communicating model results}
+Although the previous phases of the project take a lot of time and are important, it is only during the building of the model that the most important things happen. The first thing is to properly divide the database into train and test set. The test set is used to evaluate the model and check whether it works correctly only on the dataset that was used to build it. This is especially concern in case of predictive models based on machine learning where in case of too small train data set or too many learning cycles performed on this set model can lose flexibility and be useless after loading new data set. 
 
+Various metrics provided by the statistical domain can be used for evaluation. The evaluation methods will depend on the specific problem, and after the first feedback, adjustments to the model can be made. 
+
+\subsection{Communicating model results}
 \subsection{Model deployment and maintenance}
 
 
-\section{Programming language - Python}
+\section{Programming language (Python)}
+
+In this particular paper, the programming language used for data analysis will be Python, which main advantages are versatility, simple syntax, multitude of available libraries, large user base, ever-growing popularity in the scientific community, and much more.
 
 \section{Tools}
 
+
+
 \section{Use cases}
+
+
 
 \chapter{Measurements of plain bearings at available test stands.}
 
@@ -176,7 +210,7 @@ The main measurement will focus on trying to analyze the wear of the sliding sle
 
 \begin{figure}[htbp]
   \begin{center}
-    \resizebox{0.5\textwidth}{!}{
+    \resizebox{0.7\textwidth}{!}{
       \includegraphics{images/test-stand.png}
     }
     \caption[Example of measurement sleeve]{Example of measurement sleeve.}
@@ -186,7 +220,7 @@ The main measurement will focus on trying to analyze the wear of the sliding sle
 
 \begin{figure}[htbp]
   \begin{center}
-    \resizebox{0.5\textwidth}{!}{
+    \resizebox{0.7\textwidth}{!}{
       \includegraphics{images/sleeve.png}
     }
     \caption[Measurement stand]{Measurement stand.}
